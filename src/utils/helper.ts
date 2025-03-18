@@ -8,7 +8,6 @@ export const isValidNumber = (value: string) => {
 };
 
 export const formatToTwoDecimalPlaces = (number: number | string) => {
-  // return number.toFixed(2);
   if (typeof number === "string") {
     return parseFloat(number).toFixed(2);
   }

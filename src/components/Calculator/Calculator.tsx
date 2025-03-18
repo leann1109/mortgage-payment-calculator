@@ -30,6 +30,7 @@ export const Calculator = ({
     const formattedTotalRepayment = formatToTwoDecimalPlaces(
       monthlyPayments * calculateMonths
     ).toString();
+
     setMonthlyRepayment(formattedMonthlyPayments);
     setTotalRepayment(formattedTotalRepayment);
   };
@@ -39,14 +40,17 @@ export const Calculator = ({
       (Number(formattedMortgageAmount) * monthlyInterestRate) /
       (1 - Math.pow(1 + monthlyInterestRate, -calculateMonths));
 
-    updateRepayments(monthlyPayments);
+    const roundedMonthlyPayments = Math.round(monthlyPayments * 100) / 100;
+
+    updateRepayments(roundedMonthlyPayments);
   };
 
   const calculateInterestOnly = () => {
     const monthlyPayments =
       Number(formattedMortgageAmount) * monthlyInterestRate;
 
-    updateRepayments(monthlyPayments);
+    const roundedMonthlyPayments = Math.round(monthlyPayments * 100) / 100;
+    updateRepayments(roundedMonthlyPayments);
   };
 
   const calculate = () => {
