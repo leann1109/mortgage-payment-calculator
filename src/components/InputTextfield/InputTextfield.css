@@ -1,0 +1,80 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  color: var(--color-slate-700);
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--color-slate-500);
+  border-radius: 4px;
+  background: var(--color-slate-100);
+
+  > .input-textfield {
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+.input-wrapper.reverse {
+  flex-direction: row-reverse;
+
+  > .input-textfield {
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+.input-textfield {
+  border: solid 2px var(--color-white);
+  padding: 12px;
+  font-size: 1.15rem;
+  font-weight: var(--font-bold);
+  margin-left: auto;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.input-textfield:focus-visible {
+  outline: none;
+}
+
+.symbol {
+  padding: 15px 20px;
+  font-weight: var(--font-bold);
+  color: var(--color-slate-700);
+}
+
+.input-wrapper:focus-within .symbol {
+  color: var(--color-slate-900);
+}
+
+/* Error States */
+.input-wrapper.error {
+  border: solid 1px var(--color-red);
+  background: var(--color-red);
+}
+
+.symbol.error {
+  color: var(--color-white);
+}
+
+.error-text {
+  color: var(--color-red);
+  margin: 10px 0 0 0;
+}
+/* End Error States */
+
+.input-wrapper:focus-within {
+  background: var(--color-lime);
+  border: solid 1px var(--color-lime);
+}
+
+@media screen and (max-width: 375px) {
+}

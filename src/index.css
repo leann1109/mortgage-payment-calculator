@@ -1,0 +1,28 @@
+:root {
+  --color-slate-100: hsl(202, 86%, 94%);
+  --color-slate-300: hsl(203, 41%, 72%);
+  --color-slate-500: hsl(200, 26%, 54%);
+  --color-slate-700: hsl(200, 24%, 40%);
+  --color-slate-900: hsl(202, 55%, 16%);
+  --color-slate-950: hsl(202, 55%, 12%);
+  --color-lime: hsl(61, 70%, 52%);
+  --color-red: hsl(4, 69%, 50%);
+  --color-white: hsl(0, 0%, 100%);
+  font-size: 16px; /* This sets the base font size to 16px, making 1rem equal to 16px */
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-slate-100);
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
